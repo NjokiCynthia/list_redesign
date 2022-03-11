@@ -7,8 +7,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:list_redesign/counter/counter.dart';
 import 'package:list_redesign/l10n/l10n.dart';
+import 'package:list_redesign/utils/_index.dart';
 
 class App extends StatelessWidget {
   const App({Key? key}) : super(key: key);
@@ -27,7 +27,8 @@ class App extends StatelessWidget {
         GlobalMaterialLocalizations.delegate,
       ],
       supportedLocales: AppLocalizations.supportedLocales,
-      home: const CounterPage(),
+      initialRoute: ListRouter.landingRoute,
+      onGenerateRoute: ListRouter.generateRoute,
     );
   }
 }

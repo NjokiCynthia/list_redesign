@@ -5,9 +5,22 @@
 // license that can be found in the LICENSE file or at
 // https://opensource.org/licenses/MIT.
 
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:list_redesign/app/app.dart';
 import 'package:list_redesign/bootstrap.dart';
+import 'package:list_redesign/utils/_index.dart';
 
 void main() {
-  bootstrap(() => const App());
+  ListConfig(
+    values: ListValues(
+      baseDomain: 'https://jsonkeeper.com',
+    ),
+  );
+
+  bootstrap(
+        () => MultiBlocProvider(
+      providers: Singletons.registerCubits(),
+      child: const App(),
+    ),
+  );
 }

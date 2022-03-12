@@ -3,6 +3,7 @@ part of list_redesign_utils;
 class ListRouter {
   static const String decisionRoute = '/';
   static const String landingRoute = '/landing';
+  static const String formRoute = '/form';
 
   static Route<dynamic> generateRoute(RouteSettings settings) {
     // final _args = settings.arguments;
@@ -11,6 +12,10 @@ class ListRouter {
       case landingRoute:
         return _route(
           const ItemListingPage(),
+        );
+      case formRoute:
+        return _route(
+          const FormPage(),
         );
       default:
         return _route(

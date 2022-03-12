@@ -25,7 +25,6 @@ class ListRouter {
         );
     }
   }
-
   static MaterialPageRoute _route(Widget page, {bool fullscreen = false}) {
     return MaterialPageRoute<dynamic>(
       builder: (_) => page,

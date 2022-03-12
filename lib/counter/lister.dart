@@ -44,12 +44,15 @@ class _ItemListingPageState extends State<ItemListingPage> {
         },
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+        onPressed: () {
+      Navigator.pushNamed(
+          context, "/form");
+        },
         backgroundColor: Colors.blueAccent,
-        tooltip: 'Capture Picture',
-        elevation: 5,
-        splashColor: Colors.grey,
-        child: const Icon(Icons.thumb_up, color: Colors.white, size: 29,),
+        tooltip: 'Next Page',
+        elevation: 12,
+        splashColor: Colors.blueGrey,
+        child: const Icon(Icons.thumb_up, color: Colors.white, size: 40,),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
     );

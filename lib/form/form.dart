@@ -25,7 +25,7 @@ class _FormPageState extends State<FormPage> {
     return Scaffold(
       resizeToAvoidBottomInset: false,
       appBar: AppBar(
-        title: const Text('Speak to us'),
+        title: const Text('Enter the preferred shoe'),
         automaticallyImplyLeading: false,
       ),
       body: SingleChildScrollView(
@@ -94,9 +94,9 @@ class _FormWidgetState extends State<FormWidget> {
             ),
             TextFormField(
               maxLines: 2,
-              decoration: const InputDecoration(hintText: 'the slug'),
+              decoration: const InputDecoration(hintText: 'The other name'),
               validator: (value) => value!.isEmpty ? 'Enter' : null,
-              keyboardType: TextInputType.number,
+              keyboardType: TextInputType.text,
               onChanged: (val) {
                 slug = val;
               },

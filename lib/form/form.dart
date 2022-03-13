@@ -6,6 +6,7 @@ import 'package:list_redesign/models/_index.dart';
 class FormPage extends StatefulWidget {
   const FormPage({Key? key}) : super(key: key);
 
+
   @override
   State<FormPage> createState() => _FormPageState();
 }
@@ -67,12 +68,15 @@ class FormWidget extends StatefulWidget {
 }
 
 class _FormWidgetState extends State<FormWidget> {
+  final _formkey = GlobalKey<FormState>();
+  //static GlobalKey<FormState> _formKey = new GlobalKey<FormState>();
+  // Text fields
+  var name = '';
+  var slug = '';
+
   @override
   Widget build(BuildContext context) {
-    final _formkey = GlobalKey<FormState>();
-    // Text fields
-    var name = '';
-    var slug = '';
+
 
     return SizedBox(
       width: MediaQuery.of(widget.pageContext).size.width * .7,
@@ -101,6 +105,7 @@ class _FormWidgetState extends State<FormWidget> {
                 slug = val;
               },
             ),
+
             ElevatedButton(
               onPressed: () {
                 if (_formkey.currentState!.validate()) {
